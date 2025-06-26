@@ -4,6 +4,7 @@ import Banner from '../../Components/Frontend/Home/Banner';
 import Feathers from '../../Components/Frontend/Home/Feathers';
 import Services from '../../Components/Frontend/Home/Services';
 import Brands from '../../Components/Frontend/Home/Brands';
+import Testimonial from '../../Components/Frontend/Home/Testimonial';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
         <Feathers></Feathers>
         <Services></Services>
         <Brands></Brands>
+        <Testimonial></Testimonial>
         </div>
             
         </>
