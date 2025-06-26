@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Banner from '../../Components/Frontend/Home/Banner';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
                 Profast | Home Page
             </title>
         </Helmet>
+        <Banner></Banner>
             
         </>
     );
