@@ -5,13 +5,14 @@ import Feathers from '../../Components/Frontend/Home/Feathers';
 import Services from '../../Components/Frontend/Home/Services';
 import Brands from '../../Components/Frontend/Home/Brands';
 import Testimonial from '../../Components/Frontend/Home/Testimonial';
+import FAQ from '../../Components/Frontend/Home/FAQ';
 
 const Home = () => {
     return (
         <>
         <Helmet>
             <title>
-                Profast | Home Page
+                Fast-Track | Home Page
             </title>
         </Helmet>
         <div className='bg-[#EAECED]'>
@@ -20,6 +21,7 @@ const Home = () => {
         <Services></Services>
         <Brands></Brands>
         <Testimonial></Testimonial>
+        <FAQ></FAQ>
         </div>
             
         </>
