@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "1",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/1176/1176424.png",
+    "header": "Booking Pick & Drop",
+    "short_description": "Convenient pickup and drop-off service right at your doorstep."
+  },
+  {
+    "_id": "2",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/942/942751.png",
+    "header": "Cash On Delivery",
+    "short_description": "Pay only after your package is safely delivered to the recipient."
+  },
+  {
+    "_id": "3",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/891/891419.png",
+    "header": "Delivery Hub",
+    "short_description": "Access our nationwide delivery hubs for faster and localized services."
+  },
+  {
+    "_id": "4",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "header": "Booking SME & Corporate",
+    "short_description": "Tailored logistics support for SMEs and corporate clients."
+  }
+]

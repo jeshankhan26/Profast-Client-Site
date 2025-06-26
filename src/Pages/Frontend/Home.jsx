@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Banner from '../../Components/Frontend/Home/Banner';
+import Feathers from '../../Components/Frontend/Home/Feathers';
+import Services from '../../Components/Frontend/Home/Services';
 
 const Home = () => {
     return (
@@ -10,7 +12,11 @@ const Home = () => {
                 Profast | Home Page
             </title>
         </Helmet>
-        <Banner></Banner>
+        <div className='bg-[#EAECED]'>
+            <Banner></Banner>
+        <Feathers></Feathers>
+        <Services></Services>
+        </div>
             
         </>
     );

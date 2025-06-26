@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "1",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/1046/1046890.png",
+    "header": "Express & Standard Delivery",
+    "short_description": "Choose from express or standard delivery options based on your urgency and budget."
+  },
+  {
+    "_id": "2",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+    "header": "Nationwide Delivery",
+    "short_description": "Reach every corner of the country with our reliable nationwide logistics network."
+  },
+  {
+    "_id": "3",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/1792/1792929.png",
+    "header": "Fulfillment Solution",
+    "short_description": "We handle storage, packing, and shipping so you can focus on growing your business."
+  },
+  {
+    "_id": "4",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/2724/2724715.png",
+    "header": "Cash on Home Delivery",
+    "short_description": "Offer convenience to your customers with our secure cash-on-delivery service."
+  },
+  {
+    "_id": "5",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "header": "Corporate Service / Contract In Logistics",
+    "short_description": "Customized logistics solutions and long-term contracts for corporate clients."
+  },
+  {
+    "_id": "6",
+    "icon_url": "https://cdn-icons-png.flaticon.com/512/3103/3103492.png",
+    "header": "Parcel Return",
+    "short_description": "Hassle-free return service that ensures customer satisfaction and trust."
+  }
+]
