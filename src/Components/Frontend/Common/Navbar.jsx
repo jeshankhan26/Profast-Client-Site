@@ -2,6 +2,7 @@ import React from "react";
 import NavLinks from "./NavLinks";
 import logo1 from "../../../../public/assets/logo.png";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import { Link, Links } from "react-router";
 
 const Navbar = () => {
   const CustomArrowIcon = () => (
@@ -62,12 +63,12 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end gap-2">
-            <a className="btn bg-white text-black shadow-none border-gray-300">
+            <Link to={"login"} className="btn bg-white text-black shadow-none border-gray-300">
               Sign In
-            </a>
-            <a className="btn bg-[#CAEB66] border-none text-black">
+            </Link>
+            <Link to={"register"} className="btn bg-[#CAEB66] border-none text-black">
               Sign Up{" "}
-            </a>
+            </Link>
 
             <CustomArrowIcon />
           </div>
