@@ -3,27 +3,27 @@
     "_id": "665f1f1f1f1f1f1f1f1f1f1a",
     "comment": "This platform significantly improved our team's productivity and workflow.",
     "user": {
-      "name": "Sarah Ahmed",
-      "image": "https://i.pravatar.cc/150?img=32",
-      "position": "Project Manager"
+      "name": "Tamanna Sanjana Toma",
+      "image": "https://i.ibb.co/Jw3RYbfy/DS06121.jpg",
+      "position": "Computer Science & Engineering Student"
     }
   },
   {
     "_id": "665f1f1f1f1f1f1f1f1f1f1b",
     "comment": "Highly intuitive and reliable — I use it every day!",
     "user": {
-      "name": "James Ali",
-      "image": "https://i.pravatar.cc/150?img=15",
-      "position": "Software Engineer"
+      "name": "Samia Akther Arshi",
+      "image": "https://i.ibb.co/vfg6jL2/IMG0241109-WA0070.jpg",
+      "position": "Nursing Student"
     }
   },
   {
     "_id": "665f1f1f1f1f1f1f1f1f1f1c",
     "comment": "Outstanding customer support and user experience. Highly recommended!",
     "user": {
-      "name": "Mira Das",
-      "image": "https://i.pravatar.cc/150?img=27",
-      "position": "UX Designer"
+      "name": "Tuhin Ahmed",
+      "image": "https://i.ibb.co/zV7rkFjQ/Whats-App-Image-2-06-07-at-20-03-22-97d54b0a.jpg",
+      "position": "IELTS Student"
     }
   }
 ]

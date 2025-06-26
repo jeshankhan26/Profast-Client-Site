@@ -66,7 +66,7 @@ const Navbar = () => {
               Sign In
             </a>
             <a className="btn bg-[#CAEB66] border-none text-black">
-              Be a Rider{" "}
+              Sign Up{" "}
             </a>
 
             <CustomArrowIcon />
