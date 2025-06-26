@@ -11,7 +11,13 @@ const NavLinks = () => {
               ? 'bg-[#CAEB66] text-white rounded-2xl px-4 py-2'
               : 'hover:text-[#CAEB66]'
           }>Home</NavLink></li>
-      <li><a>Service</a></li>
+      <li><NavLink
+          to="/service"
+          className={({ isActive }) =>
+            isActive
+              ? 'bg-[#CAEB66] text-white rounded-2xl px-4 py-2'
+              : 'hover:text-[#CAEB66]'
+          }>Service</NavLink></li>
       {/* <li><a>Coverage</a></li> */}
       <li>
         <NavLink

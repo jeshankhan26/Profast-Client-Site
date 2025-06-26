@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Banner from '../../Components/Frontend/Home/Banner';
 import Feathers from '../../Components/Frontend/Home/Feathers';
-import Services from '../../Components/Frontend/Home/Services';
+import Services from '../../Components/Frontend/Common/Services';
 import Brands from '../../Components/Frontend/Home/Brands';
 import Testimonial from '../../Components/Frontend/Home/Testimonial';
 import FAQ from '../../Components/Frontend/Home/FAQ';
