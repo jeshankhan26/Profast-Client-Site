@@ -14,7 +14,7 @@ const Brands = () => {
   return (
     <section className="py-12 ">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-center font-bold text-3xl text-gray-800 mb-8">
+        <h1 className="text-center font-bold lg:text-3xl text-xl text-gray-800 mb-8">
           We've helped thousands of sales teams
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-center">
