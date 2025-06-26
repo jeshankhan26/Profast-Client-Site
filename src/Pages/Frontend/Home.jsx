@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Banner from '../../Components/Frontend/Home/Banner';
 import Feathers from '../../Components/Frontend/Home/Feathers';
 import Services from '../../Components/Frontend/Home/Services';
+import Brands from '../../Components/Frontend/Home/Brands';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Banner></Banner>
         <Feathers></Feathers>
         <Services></Services>
+        <Brands></Brands>
         </div>
             
         </>
