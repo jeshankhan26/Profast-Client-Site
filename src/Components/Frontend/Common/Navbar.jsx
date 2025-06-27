@@ -47,7 +47,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
                 <NavLinks></NavLinks>
               </ul>
@@ -60,7 +60,7 @@ const Navbar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <NavLinks></NavLinks>
-            </ul>
+            </ul> 
           </div>
           <div className="navbar-end gap-2">
             <Link to={"login"} className="btn bg-white text-black shadow-none border-gray-300">

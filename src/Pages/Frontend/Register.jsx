@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Lottie from 'react-lottie';
-import animationData from '../../../public/Json/Login.json'; // Replace with your Register animation JSON
+import animationData from '../../../public/Json/Login.json';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../Provider/AuthContext';
+import { sendEmailVerification, signInWithPopup } from "firebase/auth";
+import { auth } from '../../Provider/firebase.init';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const {createAccountWithEmail,Googleprovider,Gitprovider} =useContext(AuthContext);
 
   const defaultOptions = {
     loop: true,
@@ -19,29 +24,138 @@ const Register = () => {
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setError('');
+ const handleFormSubmit = (e) => {
+  e.preventDefault();
+  setError('');
 
-    if (!email) {
-      setError('Email is required');
-      return;
+  if (!email) {
+    setError('Email is required');
+    Swal.fire({
+      icon: 'warning',
+      title: 'Missing Email',
+      text: 'Please enter your email address.',
+    });
+    return;
+  }
+
+  if (!password) {
+    setError('Password is required');
+    Swal.fire({
+      icon: 'warning',
+      title: 'Missing Password',
+      text: 'Please enter your password.',
+    });
+    return;
+  }
+
+  // Optional: show a quick "processing" alert
+  Swal.fire({
+    title: 'Processing...',
+    text: `Registering with Email: ${email}`,
+    icon: 'info',
+    timer: 1000,
+    showConfirmButton: false,
+  });
+
+  createAccountWithEmail(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log(user)
+
+      // ✅ Send verification email
+      return sendEmailVerification(user)
+        .then(() => {
+          Swal.fire({
+            icon: 'success',
+            title: 'Account Created!',
+            html: `
+              Welcome, <strong>${user.email}</strong>!<br>
+              A verification email has been sent. Please check your inbox to verify your account.
+            `,
+          });
+          // Optional: clear form fields or redirect
+        });
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Registration Failed',
+        text: `(${errorCode}) ${errorMessage}`,
+      });
+
+      setError(errorMessage);
+    });
+};
+
+const handleGoogleRegister = async () => {
+  try {
+    // 1. Sign in with Google
+    const result = await signInWithPopup(auth, Googleprovider);
+    const user = result.user;
+
+    console.log("Google User:", user);
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Signed in with Google',
+      html: `
+        Welcome <strong>${user.displayName}</strong>!<br>
+        You're registered with <em>${user.email}</em>.
+      `,
+    });
+
+    // Optionally, check if email is verified (Google usually returns verified emails)
+    if (!user.emailVerified) {
+      // Normally unnecessary for Google, but just in case:
+      console.warn("Google email not verified.");
     }
-    if (!password) {
-      setError('Password is required');
-      return;
-    }
 
-    alert(`Registering with Email: ${email} and Password: ${password}`);
-  };
+    // Optional: redirect or perform other actions
+  } catch (error) {
+    console.error("Google Sign-In Error:", error);
 
-  const handleGoogleRegister = () => {
-    alert('Google register clicked');
-  };
+    Swal.fire({
+      icon: 'error',
+      title: 'Google Sign-In Failed',
+      text: error.message,
+    });
+  }
+};
 
-  const handleGithubRegister = () => {
-    alert('GitHub register clicked');
-  };
+
+const handleGithubRegister = async () => {
+  try {
+    // 1. Sign in with GitHub popup
+    const result = await signInWithPopup(auth, Gitprovider);
+    const user = result.user;
+
+    console.log("GitHub User:", user);
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Signed in with GitHub',
+      html: `
+        Welcome <strong>${user.displayName || 'User'}</strong>!<br>
+        You're registered with <em>${user.email || 'No public email'}</em>.
+      `,
+    });
+
+    // Optional: redirect or store user info in Firestore
+
+  } catch (error) {
+    console.error("GitHub Sign-In Error:", error);
+
+    Swal.fire({
+      icon: 'error',
+      title: 'GitHub Sign-In Failed',
+      text: error.message,
+    });
+  }
+};
+
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 p-6">

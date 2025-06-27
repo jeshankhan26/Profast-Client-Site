@@ -2,12 +2,13 @@ import React from 'react';
 
 // Assuming brand images are inside public/assets/brands folder
 const brandLogos = [
-  '../../../../public/assets/brands/amazon.png',
-  '../../../../public/assets/brands/amazon_vector.png',
-  '../../../../public/assets/brands/moonstar.png',
-  '../../../../public/assets/brands/randstad.png',
-  '../../../../public/assets/brands/start-people 1.png',
-  '../../../../public/assets/brands/start.png',
+'  https://i.ibb.co/F4BYTRj9/amazon.png',
+'https://i.ibb.co/QvNYvkvx/amazon-vector.png',
+'https://i.ibb.co/5WChkfY2/casio.png',
+'https://i.ibb.co/3yRZDKmy/moonstar.png',
+'https://i.ibb.co/xSTwLb1W/randstad.png',
+'https://i.ibb.co/jZBfS7Zt/start.png',
+'https://i.ibb.co/PGXCKnw2/start-people-1.png'
 ];
 
 const Brands = () => {
